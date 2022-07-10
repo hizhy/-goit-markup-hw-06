@@ -654,3 +654,10 @@ img {
 .backdrop.is-hidden .modal {
 	transform: translate(-50%, -50%) scale(0.5);
 }
+
+/* Form inside */
+.comment {
+	width: 50%;
+	height: 40px;
+	resize: none;
+}
