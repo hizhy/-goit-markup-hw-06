@@ -646,6 +646,10 @@ img {
 	background-color: inherit;
 	cursor: pointer;
 }
+.close-button:hover,
+.close-button:focus {
+	fill: var(--accent-color);
+}
 .backdrop.is-hidden {
 	opacity: 0;
 	visibility: hidden;
@@ -657,24 +661,27 @@ img {
 
 /* Form inside */
 .form-title {
+	width: 448px;
 	margin-top: 40px;
-	margin-right: 40px;
 	margin-bottom: 30px;
-	margin-left: 40px;
-	/* padding-left: 3px; */
+	margin-left: 41px;
+	padding-left: 2px;
 	font-size: 20px;
 	font-weight: 700;
 	color: var(--sec-text-color);
 }
 .box-data-list {
 	width: 448px;
-	margin-left: 40px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 20px;
 }
 .box-element {
 	position: relative;
-	margin-bottom: 28px;
-
 	outline: 1px solid lawngreen;
+}
+.box-element:not(:last-child) {
+	margin-bottom: 28px;
 }
 .field-name {
 	position: absolute;
@@ -684,7 +691,7 @@ img {
 	font-size: 12px;
 	letter-spacing: 0.01em;
 	line-height: 1.17;
-	/* outline: 1px solid orange; */
+	outline: 1px solid orange;
 }
 .icon-input {
 	position: absolute;
@@ -702,11 +709,17 @@ img {
 	border-radius: 4px;
 	font-size: 14px;
 	cursor: pointer;
-	/* outline: 1px solid red; */
+	outline: 1px solid red;
 }
+
 /* .input-field:hover, */
 .input-field:focus {
-	border: 1px solid blue;
+	border: 1px solid var(--accent-color);
+	outline: none;
+}
+
+.input-field:focus + .icon-input {
+	fill: var(--accent-color);
 }
 
 .comment-field {
@@ -719,10 +732,30 @@ img {
 .comment-field::placeholder {
 	color: rgba(117, 117, 117, 0.5);
 }
-
-.origin-checkbox: {
-	-webkit-appearance: none;
-	-moz-appearance: none;
+.agree {
+	display: flex;
+	flex-direction: row-reverse;
+	width: 423px;
+	height: 24px;
+	margin-right: auto;
+	margin-left: auto;
+	justify-content: center;
+	align-items: center;
+}
+.icon-check {
+	border: 1px solid var(--sec-text-color);
+	border-radius: 2px;
+	margin-right: 7px;
+}
+.policy {
+	line-height: 1.46;
+}
+.policy-agree {
+	color: var(--accent-color);
+}
+.origin-checkbox:checked + .icon-check {
+	background-color: var(--accent-color);
+	border: 1px solid var(--accent-cl);
 }
 
 .submit-button {
