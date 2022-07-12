@@ -656,8 +656,81 @@ img {
 }
 
 /* Form inside */
-.comment {
-	width: 50%;
+.form-title {
+	margin-top: 40px;
+	margin-right: 40px;
+	margin-bottom: 30px;
+	margin-left: 40px;
+	/* padding-left: 3px; */
+	font-size: 20px;
+	font-weight: 700;
+	color: var(--sec-text-color);
+}
+.box-data-list {
+	width: 448px;
+	margin-left: 40px;
+}
+.box-element {
+	position: relative;
+	margin-bottom: 28px;
+
+	outline: 1px solid lawngreen;
+}
+.field-name {
+	position: absolute;
+	top: -18px;
+	left: 0;
+	color: var(--text-color);
+	font-size: 12px;
+	letter-spacing: 0.01em;
+	line-height: 1.17;
+	/* outline: 1px solid orange; */
+}
+.icon-input {
+	position: absolute;
+	top: 11px;
+	left: 12px;
+}
+.input-field {
+	width: 100%;
+	padding-left: 42px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	padding-right: 12px;
 	height: 40px;
+	border: 1px solid rgba(33, 33, 33, 0.2);
+	border-radius: 4px;
+	font-size: 14px;
+	cursor: pointer;
+	/* outline: 1px solid red; */
+}
+/* .input-field:hover, */
+.input-field:focus {
+	border: 1px solid blue;
+}
+
+.comment-field {
+	height: 120px;
+	padding: 12px 16px;
 	resize: none;
+	line-height: 1.14;
+	letter-spacing: 0.01em;
+}
+.comment-field::placeholder {
+	color: rgba(117, 117, 117, 0.5);
+}
+
+.origin-checkbox: {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+.submit-button {
+	position: absolute;
+	display: block;
+	top: 491px;
+	left: calc(50% - 100px);
+	/* margin-top: 30px;
+	margin-right: auto;
+	margin-left: auto; */
 }
